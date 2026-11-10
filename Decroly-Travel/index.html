@@ -1,52 +1,101 @@
+
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Decroly-Travel</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Decroly Travel | Inicio</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
 </head>
-
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+ 
+  <nav class="navbar navbar-expand-lg py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#"><span class="brand-sun"></span> Decroly Travel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav mx-auto gap-lg-3">
+          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Sobre nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Reservas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+        </ul>
+        <a href="#" class="btn btn-ink-outline rounded-pill px-4"><i class="bi bi-person me-1"></i>Mi cuenta</a>
+      </div>
+    </div>
+  </nav>
+ 
+  <header class="hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <h1>Tu próxima aventura empieza aquí</h1>
+          <p class="mt-3 mb-4">Explora paquetes, escapadas y actividades para salir cuando quieras.</p>
+          <a href="#destinos" class="btn btn-sun btn-lg rounded-pill px-4">Reservar ahora</a>
         </div>
-    </nav>
-
+        <div class="col-lg-5 d-none d-lg-block"><div class="arch" role="img" aria-label="Ilustración de una isla griega al atardecer"></div></div>
+      </div>
+    </div>
+  </header>
+ 
+  <section class="search-wrap">
+    <div class="container">
+      <form class="search-box" onsubmit="return false;">
+        <div class="row g-2 align-items-center">
+          <div class="col-md-3 field"><label for="destino">Destino</label><input id="destino" type="text" class="form-control" placeholder="¿Dónde quieres ir?"></div>
+          <div class="col-md-3 field"><label for="fechas">Fechas</label><input id="fechas" type="date" class="form-control"></div>
+          <div class="col-md-3 field"><label for="viajeros">Viajeros</label>
+            <select id="viajeros" class="form-select"><option>1 persona</option><option selected>2 personas</option><option>3 personas</option><option>4 personas</option><option>5 o más</option></select>
+          </div>
+          <div class="col-md-3 field"><button class="btn btn-sea w-100 py-3 rounded-4"><i class="bi bi-search me-2"></i>Buscar viajes</button></div>
+        </div>
+      </form>
+    </div>
+  </section>
+ 
+  <section class="container py-5">
+    <div class="row g-4">
+      <div class="col-6 col-lg-3 perk d-flex gap-3"><i class="bi bi-compass"></i><div><div class="fw-bold">Selección cuidada</div><small class="text-secondary">Destinos para todos</small></div></div>
+      <div class="col-6 col-lg-3 perk d-flex gap-3"><i class="bi bi-headset"></i><div><div class="fw-bold">Atención personalizada</div><small class="text-secondary">Te ayudamos a viajar</small></div></div>
+      <div class="col-6 col-lg-3 perk d-flex gap-3"><i class="bi bi-check2-circle"></i><div><div class="fw-bold">Reserva clara</div><small class="text-secondary">Sin complicaciones</small></div></div>
+      <div class="col-6 col-lg-3 perk d-flex gap-3"><i class="bi bi-stars"></i><div><div class="fw-bold">Mejores experiencias</div><small class="text-secondary">Viaja con confianza</small></div></div>
+    </div>
+  </section>
+ 
+  <section class="container pb-5" id="destinos">
+    <div class="d-flex justify-content-between align-items-end mb-4">
+      <h2 class="fw-bold mb-0">Destinos destacados</h2>
+      <a href="#" class="fw-bold text-decoration-none text-nowrap" style="color:var(--sea)">Ver todas las ofertas</a>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4"><article class="dest">
+        <div class="scene scene-grecia"><span class="price">Desde 699 €</span></div>
+        <div class="p-3 d-flex flex-column flex-grow-1"><h3 class="h5 fw-bold">Grecia, islas</h3><p class="text-secondary small">Viajes y experiencias</p>
+          <a href="#" class="btn btn-sea rounded-pill mt-auto align-self-start px-4">Ver detalles</a></div>
+      </article></div>
+      <div class="col-md-6 col-lg-4"><article class="dest">
+        <div class="scene scene-costa"><span class="price">Desde 499 €</span></div>
+        <div class="p-3 d-flex flex-column flex-grow-1"><h3 class="h5 fw-bold">Costa mediterránea</h3><p class="text-secondary small">Viajes y experiencias</p>
+          <a href="#" class="btn btn-sea rounded-pill mt-auto align-self-start px-4">Ver detalles</a></div>
+      </article></div>
+      <div class="col-md-6 col-lg-4"><article class="dest">
+        <div class="scene scene-tropical"><span class="price">Desde 899 €</span></div>
+        <div class="p-3 d-flex flex-column flex-grow-1"><h3 class="h5 fw-bold">Escapada tropical</h3><p class="text-secondary small">Viajes y experiencias</p>
+          <a href="#" class="btn btn-sea rounded-pill mt-auto align-self-start px-4">Ver detalles</a></div>
+      </article></div>
+    </div>
+  </section>
+ 
+  <footer class="py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+      <div><div class="fw-bold text-white" style="font-family:'Bricolage Grotesque'">Decroly Travel</div><small>Tu próxima aventura empieza aquí</small></div>
+      <div class="d-flex flex-wrap gap-4 small"><a href="#">Aviso legal</a><a href="#">Privacidad</a><a href="#">Contacto</a><a href="#">Redes sociales</a></div>
+    </div>
+  </footer>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
