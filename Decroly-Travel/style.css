@@ -1,77 +1,269 @@
-    :root {
-      --ink: #0b1f3a;      /* azul tinta */
-      --sea: #0f7c94;      /* mar */
-      --sun: #ffb73a;      /* sol */
-      --chalk: #f6f8f7;    /* cal de pared encalada */
-      --bs-body-font-family: "DM Sans", system-ui, sans-serif;
-      --bs-body-color: var(--ink);
-      --bs-body-bg: var(--chalk);
-    }
-    h1, h2, h3, .navbar-brand { font-family: "Bricolage Grotesque", "DM Sans", sans-serif; }
-    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid var(--sun); outline-offset: 2px; }
- 
-    /* Botones */
-    .btn-sun { background: var(--sun); color: var(--ink); font-weight: 700; border: 0; }
-    .btn-sun:hover { background: #ffc460; color: var(--ink); }
-    .btn-sea { background: var(--sea); color: #fff; font-weight: 700; border: 0; }
-    .btn-sea:hover { background: #0b6679; color: #fff; }
-    .btn-ink-outline { border: 2px solid var(--ink); color: var(--ink); font-weight: 700; }
-    .btn-ink-outline:hover { background: var(--ink); color: #fff; }
- 
-    /* Navbar */
-    .navbar { background: var(--chalk); }
-    .navbar-brand { font-weight: 800; font-size: 1.4rem; color: var(--ink); }
-    .brand-sun { width: 26px; height: 26px; border-radius: 50%; background: var(--sun); display: inline-block; box-shadow: 10px 6px 0 -2px var(--sea); }
-    .navbar .nav-link { color: var(--ink); font-weight: 500; }
-    .navbar .nav-link:hover { color: var(--sea); }
-    .navbar .nav-link.active { font-weight: 700; box-shadow: inset 0 -3px 0 var(--sun); }
- 
-    /* Hero */
-    .hero { background: var(--ink); color: #fff; position: relative; overflow: hidden; }
-    .hero .container { padding-top: 4rem; padding-bottom: 7rem; position: relative; z-index: 1; }
-    .hero h1 { font-weight: 800; font-size: clamp(2.4rem, 5.5vw, 4.4rem); line-height: 1.02; letter-spacing: -.02em; max-width: 12ch; }
-    .hero p { color: #c5d3e3; font-size: 1.15rem; max-width: 36ch; }
-    .arch {
-      width: min(100%, 360px); aspect-ratio: 3 / 4; margin-inline: auto;
-      border-radius: 999px 999px 18px 18px; position: relative; overflow: hidden;
-      background:
-        radial-gradient(circle at 68% 30%, var(--sun) 0 11%, transparent 11.5%),
-        linear-gradient(180deg, #5fb8c9 0 58%, transparent 58%),
-        linear-gradient(180deg, transparent 58%, #0f7c94 58% 100%);
-      border: 8px solid var(--chalk);
-    }
-    .arch::before, .arch::after { content: ""; position: absolute; left: 0; right: 0; }
-    .arch::before { bottom: 0; height: 42%;
-      background: repeating-radial-gradient(ellipse at 50% 140%, transparent 0 14px, rgba(255,255,255,.22) 15px 17px); }
-    .arch::after { bottom: 40%; height: 14%; left: 12%; right: 12%;
-      background:
-        linear-gradient(#fff,#fff) 0 100% / 22% 100% no-repeat,
-        linear-gradient(#fff,#fff) 38% 100% / 18% 70% no-repeat,
-        linear-gradient(#fff,#fff) 74% 100% / 26% 85% no-repeat; }
- 
-    /* Buscador */
-    .search-wrap { margin-top: -3rem; position: relative; z-index: 3; }
-    .search-box { background: #fff; border-radius: 20px; padding: .9rem; box-shadow: 0 14px 40px rgba(11,31,58,.18); }
-    .search-box .field { padding: .35rem 1.1rem; }
-    @media (min-width: 768px) { .search-box .field:not(:last-child) { border-right: 1px solid #dde4ea; } }
-    .search-box label { font-size: .8rem; font-weight: 700; color: var(--sea); display: block; }
-    .search-box .form-control, .search-box .form-select { border: 0; padding: 0; box-shadow: none; font-weight: 500; font-size: 1.05rem; background-color: transparent; }
- 
-    /* Ventajas */
-    .perk i { font-size: 1.6rem; color: var(--sea); }
- 
-    /* Destinos */
-    .dest { background: #fff; border-radius: 18px; overflow: hidden; height: 100%; display: flex; flex-direction: column; }
-    .dest .scene { height: 170px; position: relative; }
-    .scene-grecia { background: radial-gradient(circle at 78% 28%, var(--sun) 0 12%, transparent 13%), linear-gradient(180deg, #8fd3e8 0 55%, #1d6fb8 55%); }
-    .scene-costa { background: radial-gradient(circle at 22% 30%, #ffe08a 0 12%, transparent 13%), linear-gradient(180deg, #ffd6b0 0 55%, #0f7c94 55%); }
-    .scene-tropical { background: radial-gradient(circle at 50% 24%, #fff3b8 0 13%, transparent 14%), linear-gradient(180deg, #7fe0c4 0 55%, #0a8f7a 55%); }
-    .dest .scene::after { content: ""; position: absolute; inset: 55% 0 0 0;
-      background: repeating-radial-gradient(ellipse at 50% 160%, transparent 0 12px, rgba(255,255,255,.25) 13px 15px); }
-    .price { position: absolute; left: 1rem; bottom: .9rem; z-index: 1; background: var(--chalk); color: var(--ink);
-      font-weight: 700; border-radius: 999px; padding: .25rem .8rem; font-size: .9rem; }
- 
-    /* Footer */
-    footer { background: var(--ink); color: #c5d3e3; }
-    footer a { color: #fff; text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
+:root {
+  --ink: #0b1f3a;
+  --sea: #0f7c94;
+  --sun: #ffb73a;
+  --chalk: #f6f8f7;
+  --sky: #e6f2f8;
+  --bs-body-font-family: "DM Sans", system-ui, sans-serif;
+  --bs-body-color: var(--ink);
+  --bs-body-bg: var(--sky);
+}
+
+h1,
+h2,
+h3,
+.navbar-brand,
+.footer-brand {
+  font-family: "Bricolage Grotesque", "DM Sans", sans-serif;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--sun);
+  outline-offset: 2px;
+}
+
+/* Botones */
+.btn-sun {
+  background: var(--sun);
+  color: var(--ink);
+  font-weight: 700;
+  border: 0;
+}
+
+.btn-sun:hover {
+  background: #ffc460;
+  color: var(--ink);
+}
+
+.btn-sea {
+  background: var(--sea);
+  color: #fff;
+  font-weight: 700;
+  border: 0;
+}
+
+.btn-sea:hover {
+  background: #0b6679;
+  color: #fff;
+}
+
+.btn-ink-outline {
+  border: 2px solid var(--ink);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.btn-ink-outline:hover {
+  background: var(--ink);
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  background: var(--sky);
+}
+
+.navbar-brand {
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--ink);
+}
+
+.brand-sun {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--sun);
+  display: inline-block;
+  box-shadow: 10px 6px 0 -2px var(--sea);
+}
+
+.navbar .nav-link {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+  color: var(--sea);
+}
+
+.navbar .nav-link.active {
+  font-weight: 700;
+  box-shadow: inset 0 -3px 0 var(--sun);
+}
+
+/* Hero con foto real */
+.hero {
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(11, 31, 58, .82) 0%, rgba(11, 31, 58, .45) 55%, rgba(11, 31, 58, .15) 100%),
+    url("https://images.pexels.com/photos/2230342/pexels-photo-2230342.jpeg?auto=compress&cs=tinysrgb&w=1920") center / cover no-repeat;
+  background-color: var(--ink);
+  /* respaldo si la imagen no carga */
+}
+
+.hero .container {
+  padding-top: 5rem;
+  padding-bottom: 8rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -.02em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, .35);
+}
+
+.hero .h1-top {
+  display: block;
+  font-size: clamp(1.6rem, 3.6vw, 2.8rem);
+}
+
+.hero .h1-main {
+  display: block;
+  font-size: clamp(2.6rem, 6.5vw, 5rem);
+}
+
+.hero p {
+  color: #e6eef7;
+  font-size: 1.15rem;
+  max-width: 36ch;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, .35);
+}
+
+/* Buscador */
+.search-wrap {
+  margin-top: -3rem;
+  position: relative;
+  z-index: 3;
+}
+
+.search-box {
+  background: #fff;
+  border-radius: 20px;
+  padding: .9rem;
+  border: 1px solid #dde4ea;
+  box-shadow: 0 4px 14px rgba(11, 31, 58, .08);
+}
+
+.search-box .field {
+  padding: .35rem 1.1rem;
+}
+
+@media (min-width: 768px) {
+  .search-box .field:not(:last-child) {
+    border-right: 1px solid #dde4ea;
+  }
+}
+
+.search-box label {
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--sea);
+  display: block;
+}
+
+.search-box .form-control,
+.search-box .form-select {
+  border: 0;
+  padding: 0;
+  box-shadow: none;
+  font-weight: 500;
+  font-size: 1.05rem;
+  background-color: transparent;
+}
+
+/* Ventajas */
+.perk i {
+  font-size: 1.6rem;
+  color: var(--sea);
+}
+
+/* Enlace "Ver todas las ofertas" */
+.link-ofertas {
+  color: var(--sea);
+}
+
+.link-ofertas:hover {
+  color: #0b6679;
+}
+
+/* Destinos con fotos reales */
+.dest {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 20px rgba(11, 31, 58, .06);
+  transition: transform .25s, box-shadow .25s;
+}
+
+.dest:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(11, 31, 58, .14);
+}
+
+.dest .scene {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  background: #cfe3ea;
+}
+
+.dest .scene img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s;
+}
+
+.dest:hover .scene img {
+  transform: scale(1.06);
+}
+
+.dest .scene::after {
+  content: "";
+  position: absolute;
+  inset: 50% 0 0 0;
+  background: linear-gradient(180deg, transparent, rgba(11, 31, 58, .45));
+  pointer-events: none;
+}
+
+.price {
+  position: absolute;
+  left: 1rem;
+  bottom: .9rem;
+  z-index: 1;
+  background: var(--chalk);
+  color: var(--ink);
+  font-weight: 700;
+  border-radius: 999px;
+  padding: .25rem .8rem;
+  font-size: .9rem;
+}
+
+/* Footer */
+footer {
+  background: var(--ink);
+  color: #c5d3e3;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
